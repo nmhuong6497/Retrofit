@@ -28,7 +28,7 @@ public class RetrofitClient {
         return instance;
     }
 
-    public static ApiService getApiService() {
+    public ApiService getApiService() {
         return apiService;
     }
 

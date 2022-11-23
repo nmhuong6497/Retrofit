@@ -59,4 +59,15 @@ public class Demo1DTO {
     public void setLogo(String logo) {
         this.logo = logo;
     }
+
+    @Override
+    public String toString() {
+        return "Demo1DTO{" +
+                "monHoc='" + monHoc + '\'' +
+                ", noiHoc='" + noiHoc + '\'' +
+                ", website='" + website + '\'' +
+                ", fanPage='" + fanPage + '\'' +
+                ", logo='" + logo + '\'' +
+                '}';
+    }
 }
