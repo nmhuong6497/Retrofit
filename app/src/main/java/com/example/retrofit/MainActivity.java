@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         ApiService apiService = RetrofitClient.getInstance().getApiService();
         callDemo1(apiService);
+        callDemo2(apiService);
     }
 
     private void callDemo1(ApiService apiService) {
@@ -33,6 +34,21 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Demo1DTO> call, Throwable t) {
+
+            }
+        });
+    }
+
+    private void callDemo2(ApiService apiService) {
+        Call<Demo2DTO> callBackDemo2 = apiService.getDemo2();
+        callBackDemo2.enqueue(new Callback<Demo2DTO>() {
+            @Override
+            public void onResponse(Call<Demo2DTO> call, Response<Demo2DTO> response) {
+                Demo2DTO demo2DTO = response.body();
+            }
+
+            @Override
+            public void onFailure(Call<Demo2DTO> call, Throwable t) {
 
             }
         });
